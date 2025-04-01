@@ -38,7 +38,7 @@ pip install flask_migrate
 ```
 ## 🚀 Rodando o Projeto
 
-Após a configuração do banco de dados, você pode rodar o servidor Flask com o seguinte comando:
+Após a configuração, você pode rodar o servidor Flask com o seguinte comando:
 
 ```bash
 py app.py
