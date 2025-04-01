@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87bcb7, #ffffff);
+    color: #4F4F4F;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #00d68f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 214, 143, 0.5);
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    background-color: #00d68f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #00d68f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-secondary {
+    width: 80%;
+    padding: 10px;
+    background-color: #87bcb7;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px auto 0;
+    display: block;
+}
+
+.btn-secondary:hover {
+    background-color: #b3b3b3;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        display: block;
+    }
+    
+    .container {
+        width: 90%;
+        padding: 20px;
+        box-shadow: none;
+    }
+    
+    input, button, .btn-secondary {
+        width: 100%;
+    }
+}

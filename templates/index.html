@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos - TimeSaver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='images/Logo_TimeSaver_slogan.png') }}" alt="Logo TimeSaver" class="logo"> <!-- Adicione a imagem aqui -->
+        <ul>
+            <li><a href="{{ url_for('index') }}">Listar</a></li>
+            <li><a href="{{ url_for('create_agendamento') }}">Criar</a></li>
+            <li><a href="{{ url_for('update_agendamento') }}">Editar</a></li>
+        </ul>
+    </nav>
+
+    <h2>Lista de Agendamentos</h2>
+    
+    <form method="GET" action="{{ url_for('index') }}">
+        <label for="client">Cliente:</label>
+        <input type="text" id="client" name="client" placeholder="Cliente" value="{{ request.args.get('client') if request.args.get('client') else '' }}">
+    
+        <label for="servico">Serviço:</label>
+        <input type="text" id="servico" name="servico" placeholder="Serviço" value="{{ request.args.get('servico', '') }}">
+    
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" placeholder="DD-MM-YYYY" value="{{ request.args.get('data') if request.args.get('data') else '' }}">
+    
+        <button type="submit">Filtrar</button>
+    </form>
+
+    <div class="container">
+        <ul>
+            {% for agendamento in agendamentos %}
+                <li>
+                    {{ agendamento.client }} | {{ agendamento.servico }} | {{ agendamento.data }} {{ agendamento.horario }}
+                    <div style="display: flex; align-items: center;">
+                        <form action="{{ url_for('update_agendamento', id=agendamento.id) }}" method="GET" style="display:inline;">
+                            <button type="submit" class="edit-button" style="margin-right: 10px;">Editar</button>
+                        </form>
+                        <form action="{{ url_for('delete_agendamento', id=agendamento.id) }}" method="POST" style="display:inline;">
+                            <button type="submit" class="delete-button">Excluir</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Agendamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Logo_TimeSaver_slogan.png') }}" alt="Logo TimeSaver" class="logo">
+    <div class="container">
+        <h1>Criar Agendamento</h1>
+        <form action="{{ url_for('create_agendamento') }}" method="POST">
+            <label for="data">Data (DD-MM-YYYY):</label>
+            <input type="text" id="data" name="data" placeholder="Ex: 25-12-2023" required>
+
+            <label for="horario">Horário (HH:MM):</label>
+            <input type="text" id="horario" name="horario" placeholder="Ex: 14:30" required>
+
+            <label for="client">Cliente:</label>
+            <input type="text" id="client" name="client" placeholder="Nome do Cliente" required>
+
+            <label for="servico">Serviço:</label>
+            <input type="text" id="servico" name="servico" placeholder="Nome do Serviço" required>
+
+            <button type="submit">Criar</button>
+        </form>
+        <form action="{{ url_for('index') }}" method="GET">
+            <button type="submit" class="btn-secondary">Voltar</button>
+        </form>
+    </div>
+</body>
+</html>
