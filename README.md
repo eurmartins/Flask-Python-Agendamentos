@@ -3,6 +3,12 @@
 
 Este é um projeto simples de agendamentos utilizando Flask, Python, e SQLite como banco de dados. Ele permite a criação, leitura, atualização e exclusão de agendamentos através de uma API RESTful. O projeto utiliza SQLAlchemy como ORM e Flask-Migrate para gerenciar migrações de banco de dados.
 
+## 📷 Demonstração
+
+
+https://github.com/user-attachments/assets/ebaf32de-9f56-4288-8402-02fc33bbac71
+
+
 ## 📋 Requisitos
 
 Antes de começar, você precisa ter o Python instalado em sua máquina:
@@ -61,7 +67,7 @@ python -m unittest test_app.py
 ## 🤝 Contribuindo
 Sinta-se à vontade para enviar contribuições! Para isso, faça um fork do repositório, crie uma branch com sua funcionalidade, e envie um pull request.
 
-## Agradecimento
+## 📱 Agradecimento
 Muito Obrigado pelo desafio e pela oportunidade TimeSaver!
 
 
