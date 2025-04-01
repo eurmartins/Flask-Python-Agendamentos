@@ -20,17 +20,17 @@
         {% if agendamento %}
         <form action="{{ url_for('update_agendamento', id=agendamento.id) }}" method="POST">
             <label for="data">Data (DD-MM-YYYY):</label>
-            <input type="text" id="data" name="data" value="{{ agendamento.data }}" placeholder="Ex: 25-12-2023" required>
-        
+            <input type="text" id="data" name="data" value="{{ agendamento.data }}" placeholder="Ex: 25-12-2023" required pattern="\d{2}-\d{2}-\d{4}" title="Digite a data no formato DD-MM-YYYY">
+
             <label for="horario">Horário (HH:MM):</label>
-            <input type="text" id="horario" name="horario" value="{{ agendamento.horario }}" placeholder="Ex: 14:30" required>
-        
+            <input type="text" id="horario" name="horario" value="{{ agendamento.horario }}" placeholder="Ex: 14:30" required pattern="\d{2}:\d{2}" title="Digite o horário no formato HH:MM">
+
             <label for="client">Cliente:</label>
             <input type="text" id="client" name="client" value="{{ agendamento.client }}" placeholder="Nome do Cliente" required>
-        
+
             <label for="servico">Serviço:</label>
             <input type="text" id="servico" name="servico" value="{{ agendamento.servico }}" placeholder="Nome do Serviço" required>
-        
+
             <button type="submit">Salvar</button>
         </form>
         {% endif %}

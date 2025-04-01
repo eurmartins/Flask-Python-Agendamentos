@@ -54,7 +54,7 @@ h2 {
 form {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between; /* Alinha os elementos na linha */
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 15px;
@@ -78,7 +78,7 @@ form input {
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s;
-    width: 150px; /* Define um tamanho fixo para os inputs */
+    width: 150px;
 }
 
 form input:focus {
@@ -93,7 +93,7 @@ form button {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: 120px; /* Ajusta o botão para ficar do tamanho adequado */
+    width: 120px;
 }
 
 form button:hover {
